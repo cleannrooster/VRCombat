@@ -1,6 +1,6 @@
 package elocindev.vrcombat.fabric.mixin;
 
-import net.bettercombat.client.BetterCombatClient;
+import net.bettercombat.client.BetterCombatClientMod;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
@@ -30,11 +30,11 @@ public abstract class MinecraftClientMixin {
 		if (ClientDataHolderVR.getInstance().vrSettings.vrEnabled &&
 				VivecraftClientAPI.getInstance() != null &&
 				VivecraftClientAPI.getInstance().isVrActive()) {
-			BetterCombatClient.ENABLED = false;
+			BetterCombatClientMod.ENABLED = false;
 		}
 		else {
 			// RE ENABLE WHEN VR IS OFF. SUPER IMPORTANT!!
-			BetterCombatClient.ENABLED = true;
+			BetterCombatClientMod.ENABLED = true;
 		}
 	}
 }
